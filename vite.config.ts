@@ -5,10 +5,12 @@ import { VitePWA } from 'vite-plugin-pwa';
 // GitHub Pages hosts project sites at /<repository>/ instead of /.
 // Its static server cannot rewrite SPA routes; the Pages build uses hash routes.
 const pagesBase = process.env.PAGES_BASE;
+const pagesBuild = pagesBase !== undefined;
 
 export default defineConfig({
   base: pagesBase || '/',
-  plugins: [react(), ...(pagesBase ? [] : [VitePWA({
+  define: { __PAGES_BUILD__: JSON.stringify(pagesBuild) },
+  plugins: [react(), ...(pagesBuild ? [] : [VitePWA({
     registerType: 'autoUpdate',
     manifest: false,
     workbox: {

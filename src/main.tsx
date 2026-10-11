@@ -13,6 +13,7 @@ import '@astryxdesign/core/astryx.css';
 import './style.css';
 
 const queryClient = new QueryClient({ defaultOptions: {queries:{retry:1,staleTime:15_000}} });
+declare const __PAGES_BUILD__: boolean;
 
 class RouteErrorBoundary extends React.Component<{children:React.ReactNode;home:string},{failed:boolean}> {
   state = {failed:false};
@@ -63,7 +64,7 @@ function AppShell(){
   useEffect(()=>{if(q.data){
     document.title=q.data.name+' — онлайн-запись';
     // The tenant PWA manifest has root-based URLs and is for the local/standalone build.
-    if(import.meta.env.BASE_URL==='/'){
+    if(!__PAGES_BUILD__){
       const manifest=document.querySelector('link[rel=manifest]')||document.createElement('link');
       manifest.setAttribute('rel','manifest');
       manifest.setAttribute('href',`/tenants/${slug}/manifest.webmanifest`);
@@ -92,5 +93,5 @@ function AppShell(){
 }
 
 function Start(){return <Navigate to="/s/atelier/" replace/>;}
-const Router=import.meta.env.BASE_URL==='/'?BrowserRouter:HashRouter;
+const Router=__PAGES_BUILD__?HashRouter:BrowserRouter;
 createRoot(document.getElementById('root')!).render(<React.StrictMode><QueryClientProvider client={queryClient}><Router><Routes><Route path="/" element={<Start/>}/><Route path="/s/:slug/*" element={<AppShell/>}/><Route path="*" element={<Start/>}/></Routes></Router></QueryClientProvider></React.StrictMode>);
