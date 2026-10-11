@@ -1,0 +1,37 @@
+{
+  "slug": "atelier",
+  "published": false,
+  "name": "ATELIER DETAILING",
+  "eyebrow": "ПРЕМИАЛЬНЫЙ ДЕТЕЙЛИНГ · МОСКВА",
+  "tagline": "Искусство быть безупречным.",
+  "description": "Детейлинг, защита и восстановление автомобиля. Внимание к каждому изгибу, каждой поверхности и каждой детали.",
+  "address": "Москва, Бережковская набережная, 20",
+  "phone": "+7 999 000-00-00",
+  "timezone": "Europe/Moscow",
+  "currency": "RUB",
+  "hero": "/tenants/atelier/images/hero.jpg",
+  "logo": "/tenants/atelier/icon.svg",
+  "cancellationHours": 24,
+  "infoCards": [
+    { "icon": "ShieldCheck", "title": "Гарантия качества", "text": "Отвечаем за результат каждой услуги" },
+    { "icon": "Clock", "title": "Точно в срок", "text": "Прозрачные сроки и запись без звонков" },
+    { "icon": "Sparkle", "title": "Внимание к деталям", "text": "Премиальные материалы и мастера" }
+  ],
+  "schedule": { "0": null, "1": { "open": "09:00", "close": "21:00" }, "2": { "open": "09:00", "close": "21:00" }, "3": { "open": "09:00", "close": "21:00" }, "4": { "open": "09:00", "close": "21:00" }, "5": { "open": "09:00", "close": "21:00" }, "6": { "open": "10:00", "close": "19:00" } },
+  "daysOff": [],
+  "services": [
+    { "id": "a58a2db8-490a-4f9d-a9dd-001001000001", "title": "Комплексный детейлинг", "category": "УХОД", "description": "Бережная мойка, глубокая очистка и защита кузова и салона.", "price": 8500, "durationMinutes": 240, "bufferMinutes": 30, "enabled": true },
+    { "id": "a58a2db8-490a-4f9d-a9dd-001001000002", "title": "Полировка кузова", "category": "ВОССТАНОВЛЕНИЕ", "description": "Возвращаем лакокрасочному покрытию глубину цвета и блеск.", "price": 18000, "durationMinutes": 480, "bufferMinutes": 30, "enabled": true },
+    { "id": "a58a2db8-490a-4f9d-a9dd-001001000003", "title": "Керамическое покрытие", "category": "ЗАЩИТА", "description": "Долговременная защита и насыщенный зеркальный финиш.", "price": 32000, "durationMinutes": 2880, "bufferMinutes": 60, "enabled": true },
+    { "id": "a58a2db8-490a-4f9d-a9dd-001001000004", "title": "Химчистка салона", "category": "САЛОН", "description": "Глубокое очищение тканей, кожи и труднодоступных мест.", "price": 12000, "durationMinutes": 360, "bufferMinutes": 30, "enabled": true }
+  ],
+  "bays": [
+    { "id": "b58a2db8-490a-4f9d-a9dd-001001000001", "title": "Бокс 1", "enabled": true },
+    { "id": "b58a2db8-490a-4f9d-a9dd-001001000002", "title": "Бокс 2", "enabled": true }
+  ],
+  "gallery": [
+    { "id": "c58a2db8-490a-4f9d-a9dd-001001000001", "image": "/tenants/atelier/images/work-1.jpg", "caption": "Полировка · Porsche 911" },
+    { "id": "c58a2db8-490a-4f9d-a9dd-001001000002", "image": "/tenants/atelier/images/work-2.jpg", "caption": "Керамика · Mercedes-Benz" },
+    { "id": "c58a2db8-490a-4f9d-a9dd-001001000003", "image": "/tenants/atelier/images/work-3.jpg", "caption": "Детейлинг · BMW M4" }
+  ]
+}
